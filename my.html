@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RSI Chart</title>
+    <style>
+      canvas {
+        display: block;
+        width: 800px;
+        height: 400px;
+        margin: 20px auto;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <canvas id="chart"></canvas>
+
+    <script>
+      var rsi_period = 14;
+      var ema_period = 10;
+
+      function rsi(values, period) {
+        // Calculate RSI logic goes here
+        // ...
+        return rsiValues;
+      }
+
+      function ema(values, period) {
+        // Calculate EMA logic goes here
+        // ...
+        return emaValues;
+      }
+
+      function hline(value, title, linestyle, linewidth, color) {
+        // Draw horizontal line logic goes here
+        // ...
+        return lineObject;
+      }
+
+      function fill(upper, lower, color, title) {
+        // Fill zone logic goes here
+        // ...
+      }
+
+      function plot(data, title, style, linewidth, color) {
+        // Plot line logic goes here
+        // ...
+      }
+
+      var chartData = {
+        labels: ["Label 1", "Label 2", "Label 3", "Label 4", "Label 5"],
+        datasets: [
+          {
+            label: "RSI",
+            data: [70, 80, 60, 50, 75], // Example RSI data
+            borderColor: "orange",
+            borderWidth: 2,
+            fill: false,
+          },
+          {
+            label: "EMA",
+            data: [65, 75, 55, 45, 70], // Example EMA data
+            borderColor: "white",
+            borderWidth: 1,
+            fill: false,
+          },
+        ],
+      };
+
+      var ctx = document.getElementById("chart").getContext("2d");
+      var chart = new Chart(ctx, {
+        type: "line",
+        data: chartData,
+        options: {
+          // Chart options
+        },
+      });
+    </script>
+  </body>
+</html>
